@@ -290,6 +290,48 @@
                   <class>fa-puzzle-piece</class>
                </icon>
             </datasource>
+            <datasource>
+               <name>S3-repo</name>
+               <icon>
+                  <class>fa-file-o</class>
+                  <stackedclass>fa-amazon</stackedclass>
+               </icon>
+            </datasource>
+            <datasource>
+               <name>img-S3-repo</name>
+               <icon>
+                  <class>fa-square</class>
+                  <stackedclass>fa-amazon fa-inverse</stackedclass>
+               </icon>
+            </datasource>
+            <datasource>
+               <name>video-S3-repo</name>
+               <icon>
+                  <class>fa-film</class>
+                  <stackedclass>fa-amazon</stackedclass>
+               </icon>
+            </datasource>
+            <datasource>
+               <name>S3-upload</name>
+               <icon>
+                  <class>fa-file-o</class>
+                  <stackedclass>fa-amazon</stackedclass>
+               </icon>
+            </datasource>
+            <datasource>
+               <name>img-S3-upload</name>
+               <icon>
+                  <class>fa-square</class>
+                  <stackedclass>fa-amazon fa-inverse</stackedclass>
+               </icon>
+            </datasource>
+            <datasource>
+               <name>video-S3-upload</name>
+               <icon>
+                  <class>fa-film</class>
+                  <stackedclass>fa-amazon</stackedclass>
+               </icon>
+            </datasource>
          </datasources>
          <objectTypes>
             <type>
@@ -335,20 +377,12 @@
          <label>Configuration</label>
       </tool>
       <tool>
-         <name>groups</name>
-         <label>Groups</label>
-      </tool>
-      <tool>
          <name>audit</name>
          <label>Audit</label>
       </tool>
       <tool>
          <name>workflow-states</name>
          <label>Workflow States</label>
-      </tool>
-      <tool>
-         <name>logging</name>
-         <label>Logging Levels</label>
       </tool>
       <tool>
          <name>log-view</name>
@@ -366,6 +400,13 @@
          <label>Remote Repositories</label>
          <icon>
             <class>fa-database</class>
+         </icon>
+      </tool>
+      <tool>
+         <name>graphiql</name>
+         <label>GraphiQL</label>
+         <icon>
+            <class>fa-line-chart</class>
          </icon>
       </tool>
    </tools>
