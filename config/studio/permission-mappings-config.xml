@@ -272,6 +272,8 @@
             <permission>get_publishing_queue</permission>
             <permission>cancel_publish</permission>
             <permission>encryption_tool</permission>
+            <permission>publish_status</permission>
+            <permission>publish_clear_lock</permission>
          </allowed-permissions>
       </rule>
       <rule regex="^/(?!site/website/index\.xml)(.*)">
@@ -298,6 +300,8 @@
             <permission>get_publishing_queue</permission>
             <permission>cancel_publish</permission>
             <permission>encryption_tool</permission>
+            <permission>publish_status</permission>
+            <permission>publish_clear_lock</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
