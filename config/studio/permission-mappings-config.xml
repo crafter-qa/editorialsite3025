@@ -218,6 +218,7 @@
             <permission>push_to_remote</permission>
             <permission>rebuild_database</permission>
             <permission>remove_remote</permission>
+            <permission>write_configuration</permission>
          </allowed-permissions>
       </rule>
       <rule regex="^/(?!site/website/index\.xml)(.*)">
@@ -234,6 +235,7 @@
             <permission>push_to_remote</permission>
             <permission>rebuild_database</permission>
             <permission>remove_remote</permission>
+            <permission>write_configuration</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
