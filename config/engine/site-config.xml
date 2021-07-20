@@ -18,4 +18,5 @@
 <!--
     This file configures site properties used by Crafter Engine
 -->
-<site/>
+<site>
+	<version>2</version></site>
