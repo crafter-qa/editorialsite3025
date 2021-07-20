@@ -176,5 +176,11 @@
          <description>Engine URL Rewrite Configuration (XML Style)</description>
          <samplePath>/studio/administration/samples/sample-urlrewrite.xml</samplePath>
       </file>
+      <file>
+         <path>/studio/form-control-config/rte/rte-setup-tinymce5.xml</path>
+         <title>confTabRTEtMCE5Conf</title>
+         <description>confTabRTEtMCE5ConfDesc</description>
+         <samplePath>/studio/administration/samples/sample-form-control-rte-setup-tinymce5.xml</samplePath>
+      </file>
    </files>
 </config>
