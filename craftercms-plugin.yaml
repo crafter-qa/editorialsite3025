@@ -1,0 +1,42 @@
+# This file describes a plugin for use in Crafter CMS
+
+# The version of the format for this file
+descriptorVersion: 2
+
+# Describe the blueprint
+plugin:
+  type: blueprint
+  id: org.craftercms.blueprint.editorial
+  name: Website Editorial Blueprint
+  tags:
+    - blueprint
+    - website
+    - editorial
+  version:
+    major: 1
+    minor: 0
+    patch: 0
+  description: |
+    Editorial blueprint
+  website:
+    name: Website Editorial Blueprint
+    url: https://craftercms.org
+  developer:
+    company:
+      name: Crafter Software
+      email: info@craftersoftware.com
+      url: https://craftersoftware.com/
+  build:
+    id: c3d2a5444e6a24b5e0481d6ba87901d0b02716c8
+    date: 2019-01-23T00:00:00Z
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  crafterCmsVersions:
+    - major: 3
+      minor: 1
+      patch: 1
+  crafterCmsEditions:
+    - community
+    - enterprise
+  searchEngine: CrafterSearch
