@@ -121,6 +121,7 @@
             <permission>S3 Write</permission>
             <permission>webdav_read</permission>
             <permission>webdav_write</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -168,6 +169,7 @@
             <permission>Publish</permission>
             <permission>get_publishing_queue</permission>
             <permission>cancel_publish</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
@@ -176,6 +178,7 @@
             <permission>S3 Write</permission>
             <permission>webdav_read</permission>
             <permission>webdav_write</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -207,6 +210,7 @@
             <permission>commit_resolution</permission>
             <permission>cancel_failed_pull</permission>
             <permission>encryption_tool</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
       <rule regex="^/(?!site/website/index\.xml)(.*)">
@@ -233,6 +237,7 @@
             <permission>commit_resolution</permission>
             <permission>cancel_failed_pull</permission>
             <permission>encryption_tool</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
@@ -241,6 +246,7 @@
             <permission>S3 Write</permission>
             <permission>webdav_read</permission>
             <permission>webdav_write</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -310,6 +316,7 @@
             <permission>S3 Write</permission>
             <permission>webdav_read</permission>
             <permission>webdav_write</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -320,6 +327,7 @@
             <permission>Publish</permission>
             <permission>get_publishing_queue</permission>
             <permission>cancel_publish</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
       <rule regex="~DASHBOARD~">
@@ -327,12 +335,14 @@
             <permission>Publish</permission>
             <permission>get_publishing_queue</permission>
             <permission>cancel_publish</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
          <allowed-permissions>
             <permission>S3 Read</permission>
             <permission>webdav_read</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -340,12 +350,14 @@
       <rule regex="/.*">
          <allowed-permissions>
             <permission>Read</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
          <allowed-permissions>
             <permission>S3 Read</permission>
             <permission>webdav_read</permission>
+            <permission>publish_status</permission>
          </allowed-permissions>
       </rule>
    </role>
