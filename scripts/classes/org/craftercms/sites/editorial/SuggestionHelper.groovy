@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007-2022 Crafter Software Corporation. All Rights Reserved.
+ * Copyright (C) 2007-2020 Crafter Software Corporation. All Rights Reserved.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as published by
@@ -16,38 +16,36 @@
 
 package org.craftercms.sites.editorial
 
-import co.elastic.clients.elasticsearch.core.SearchRequest
-import org.craftercms.search.elasticsearch.client.ElasticsearchClientWrapper
+import org.elasticsearch.action.search.SearchRequest
+import org.elasticsearch.index.query.QueryBuilders
+import org.elasticsearch.search.builder.SearchSourceBuilder
 
 class SuggestionHelper {
 	
 	static final String DEFAULT_CONTENT_TYPE_QUERY = "content-type:\"/page/article\""
 	static final String DEFAULT_SEARCH_FIELD = "subject_t"
-
-	ElasticsearchClientWrapper elasticsearchClient
+	
+	def elasticsearch
 	
 	String contentTypeQuery = DEFAULT_CONTENT_TYPE_QUERY
 	String searchField = DEFAULT_SEARCH_FIELD
 	
-	SuggestionHelper(elasticsearchClient) {
-		this.elasticsearchClient = elasticsearchClient
+	SuggestionHelper(elasticsearch) {
+		this.elasticsearch = elasticsearch
 	}
 	
 	def getSuggestions(String term) {
 		def queryStr = "${contentTypeQuery} AND ${searchField}:*${term}*"
-		def result = elasticsearchClient.search(SearchRequest.of(r -> r
-			.query(q -> q
-				.queryString(s -> s
-					.query(queryStr)
-				)
-			)
-		), Map)
+		def builder = new SearchSourceBuilder()
+			.query(QueryBuilders.queryStringQuery(queryStr))
+
+		def result = elasticsearch.search(new SearchRequest().source(builder))
 
 		return process(result)
 	}
 	
 	def process(result) {
-		def processed = result.hits.hits*.source().collect { doc ->
+		def processed = result.hits.hits*.getSourceAsMap().collect { doc ->
 			doc[searchField]
 		}
 		return processed

@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 	<head>
 		<title>Editorial</title>
 		<meta charset="utf-8" />
@@ -16,10 +16,10 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-
+                            
                             <!-- Header -->
 							<@renderComponent componentPath="/site/components/headers/header.xml" />
-
+                            
                             <!-- Banner -->
 								<section id="banner">
 									<div class="content">
